@@ -7,17 +7,29 @@
     Good luck, and have fun!
 */
 
-.post-it-yellow {
-    background-color: rgb(252, 252, 117);
+.post-it {
     display: inline-block;
     width: 200px;
     height: 200px;
 }
 
-.post-it-blue {
-    background-color: rgb(112, 143, 255);
-    display: inline-block;
-    width: 200px;
-    height: 200px;
+.yellow {
+    background-color: rgb(252, 252, 103);
+    text-align: center;
+}
+
+.blue {
+    background-color: rgb(113, 151, 255);
+    text-align: center;
+}
+
+.pink {
+    background-color: pink;
+    text-align: center;
+}
+
+.green {
+    background-color: rgb(133, 255, 133);
+    text-align: center;
 }
     

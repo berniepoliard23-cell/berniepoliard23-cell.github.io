@@ -16,3 +16,13 @@ body {
     background-color: #6a68dc;
 }
 
+#third-paragraph {
+    background-color: rgb(60, 60, 204);
+    color: black;
+}
+
+#fourth-paragraph {
+    background-color: rgb(28, 28, 139);
+    color: white;
+}
+
