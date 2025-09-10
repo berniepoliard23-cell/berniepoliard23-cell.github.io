@@ -31,15 +31,18 @@
 .green {
     background-color: rgb(133, 255, 133);
     text-align: center;
+    display: block;
 }
 
 .purple {
     background-color: rgb(255, 159, 255);
     text-align: center;
+    display: inline-block;
 }
 
 .orange {
     background-color: rgb(246, 194, 97);
     text-align: center;
+    display: inline-block;
 }
     
