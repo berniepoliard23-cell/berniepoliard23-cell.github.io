@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.single-colum {
+    background-color: blueviolet;
+    max-width: 500px;
+    margin: auto;
+
+
+}
