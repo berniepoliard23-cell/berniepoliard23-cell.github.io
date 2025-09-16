@@ -5,3 +5,13 @@ body {
     margin: 0px;
     font-family: sans-serif;
 }
+
+.center {
+    padding: 24px;
+    margin: auto;
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+}
