@@ -22,7 +22,9 @@ body {
     padding: 48px 24px;
 }
 
-.lighter-outer-container
+.lighter-outer-container img {
+    align-items: center;
+}
 
 .Click-Here {
     background-color: greenyellow;

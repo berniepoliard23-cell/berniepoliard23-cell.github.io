@@ -6,18 +6,59 @@ body {
     font-family: sans-serif;
 }
 
+.to-do-list {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #morning {
-    background-color: yellowgreen;
-    margin: 24px;
+    background-color: rgb(194, 132, 252);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    
 }
 
 #afternoon {
-    background-color: plum;
-    margin: 24px;
+    background-color: rgb(90, 127, 247);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 #evening {
-    background-color: rgb(105, 105, 237);
-    margin: 24px;
+    background-color: rgb(142, 220, 142);
+    margin: 20;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.important {
+    color: red;
+    font-weight: bold;
+}
+
+.completed {
+    color: rgb(255, 255, 255);
+}
+
+.button a {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 57);
+    border-style: solid;
+    font-weight: bold;
+}
+
+.completed a {
+    border-radius: 10px;
+    background-color: beige;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.important a {
+    border-radius: 14px;
+    background-color: beige;
+    border-style: solid;
 }
