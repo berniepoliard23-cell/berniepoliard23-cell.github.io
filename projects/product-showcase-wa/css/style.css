@@ -6,28 +6,25 @@ body {
     font-family: sans-serif;
 }
 
-.outer-container {
+.single-column {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.lighter-outer-container {
-    background-color: rgb(180, 115, 45);
-    padding: 48px 24px;
+.light-outer-container {
+    background-color: rgb(199, 165, 244);
+    padding: 46px 24px;
 }
 
-.darker-outer-container {
-    background-color: rgb(172, 87, 7);
-    padding: 48px 24px;
-}
-
-.lighter-outer-container img {
-    align-items: center;
+.dark-outer-container {
+    background-color: rgb(219, 45, 126);
+    padding: 46px 24px;
+    color: rgb(201, 157, 243);
 }
 
 .Click-Here {
-    background-color: greenyellow;
+    background-color: rgb(255, 255, 255);
     margin: 20px;
     border-style: double;
     font-size: 20px;
