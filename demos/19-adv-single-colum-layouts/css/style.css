@@ -6,20 +6,23 @@ body {
     font-family: sans-serif;
 }
 
-.single-colum {
+.outer-container {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+    padding: 500px;
 }
 
 .lighter-outer-container {
     background-color: rgb(73, 209, 27);
     padding: 48px 24px; 
     margin-right: auto;
+    margin-left: auto;
 
 }
 
 .darker-outer-container {
     background-color: blue;
     padding: 48px 24px;
-}  
+}
