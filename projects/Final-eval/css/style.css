@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#single-column {
+    background-image: url(../images/grass.jpg);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.flyer-image img{
+    display: flex;
+    gap: 36px;
+    
+
+}
+
+.settings {
+    align-items: center;
+    padding: 46px 24px;
+}
+
+.make-it {
+    display: flex inline;
+    text-align: center;
+    border-width: 5px;
+    background-color: brown;
+    border-style: double;
+    border-color: bisque;
+    padding: 10px 10px;
+    margin: 30px;
+}
+
+.cant-make-it {
+    border-width: 5px;
+    padding: 10px 10px;
+    display: flex inline;
+    text-align: center;
+    background-color: brown;
+    border-style: double;
+    border-color: bisque;
+    margin: 30px;
+}
