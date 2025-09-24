@@ -7,7 +7,7 @@ body {
 }
 
 #centered-hero {
-    background-image: url("../images/Bernie\'sCollage.jpg");
+    background-image: url("../images/blackcollage.webp");
     background-size: cover;
     background-position: center center;
     height: 50vh;
@@ -24,13 +24,13 @@ body {
     text-align: center;
 }
 
-.horizontal-masonry-gallery {
+.asthetic-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-.horizontal-masonry-gallery img {
+.asthetic-gallery img {
     height: 250px;
     flex: 1;
     object-fit: cover;
