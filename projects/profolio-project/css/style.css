@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #959595;
+}
+
+#navbar {
+    background: linear-gradient( /* color stops */
+        to bottom,
+        rgb(134, 141, 134),
+        #464746
+    );
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar #logo-container {
+    margin-right: auto;
+}
+
+#centered-hero {
+    background-image: url("../images/urban-hi-res-3q76.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#centered-hero .hero-content {
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 6vw;
+}
+
+.hero-content h3 {
+    font-size: 3vw;
+}
+
+#centered-hero .cta-button {
+  background-color: white;
+  color: black;
+  border-radius: 36px;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 150px;
+  text-align: center;
+  margin-right: 24px;
+  margin-left: 24px;  
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+.horizontal-masonry-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.horizontal-masonry-gallery img {
+    height: 150px;
+    flex: 1;
+    object-fit: cover;
+    border-style:groove;
+    border:groove 20px gray;
+}
+
+#single-column {
+    max-width: 800px;
+    margin: 36px auto;
+}
+
+.card {
+    background-color: #959595;
+    border: 24px groove rgb(123, 123, 123);
+    padding: 36px;
+    text-align: center;
+    margin: 36px 0px;
+    height: 250px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+#card-container {
+    display: flex;
+    gap: 36px;
+
+}
+
+.cta-cards {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding:5px 2px ; 
+    align-items: center;
+}
+
+/*TABLET BREAKPOINT*/
+@media screen and (max-width: 640px) {
+    /*body {
+        background-color: rgb(160, 219, 255);
+    }*/
+
+    #layout {
+        font-size: 44px;
+    }
+
+    .horizontal-masonry-gallery{
+    grid-template-columns: 1fr;
+    }
+}
+
+/*MOBLE BREAKPOINT*/
+@media screen and (max-width: 450px) {
+    /*body {
+        background-color: rgb(0, 102, 255);
+    }*/
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #layout {
+        font-size: 32px;
+    }
+}
