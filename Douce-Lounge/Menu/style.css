@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Navbar container */
+#Douce-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 30px;
+}
+
+/* Logo */
+#logo-container img {
+  border-radius: 5%;
+}
+
+/* Nav links */
+#Douce-navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+/* Standard buttons */
+.button:hover {
+  color: #fb0000;
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: #ff0000;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #919191;
+}
+
+/* Align links to the right */
+#Douce-navbar a:not(#logo-container) {
+  display: inline-block;
+}
+
+/* Optional: spacing fix */
+#Douce-navbar {
+  gap: 15px;
+}
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+    color: #000000;
+    margin: 50px 0;
+    align-items: center;
+  }
+
+  .menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+
+  max-width: 450px;   /* controls how wide the menu can be */
+  margin: 0 auto;      /* centers it horizontally */
+  padding: 0 20px 60px;
+}
+  .category-card {
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    width: 450px;
+  }
+
+  .category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+  }
+
+  /* Overlay */
+  .category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    transition: 0.3s;
+  }
+
+  .category-card h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    color: #fffdfd;
+  }
+
+  /* Hover */
+  .category-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .category-card:hover::after {
+    background: rgba(0,0,0,0.4);
+  }

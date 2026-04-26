@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Truth ReserveTable Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="navbar-reservetab">
+           <a href="#" id="logo-container">
+                <img src="image/web-logo-blk.jpg" alt="truthlogo" width="100" 
+                height="55">
+            </a>
+            <a href="Home-page.html" class="button">Home</a>
+            <a href="Event-page.html" class="button">Event</a>
+            <a href="Gallery-page.html" class="button">Gallery</a>
+            <a href="Menu-page.html" class="button">Menu</a>
+            <a href="AboutUs-page.html" class="button">About Us</a>
+            <a href="ReserveTable-page.html" class="cta-button">Reserve Table</a>
+        </div>
+        <p><h1>Reserve Table</h1></p>
+        <hr>
+        <p><h4>Reserve your VIP section or table at Truth Lounge and elevate 
+            your experience while you soak in the vibe.</h4></p>
+        <div class="form-container">
+          <h2>VIP Reservation</h2>
+          <label>Full Name</label>
+          <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <br>
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <br>
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <br>
+          <label>Reservation Date</label>
+          <input type="date" name="date" required>
+          <br>
+          <label>Reservation Time</label>
+          <input type="time" name="time" required>
+          <br>
+          <label>Guests</label>
+          <select name="guests" required>
+             <option value="">Select Guests</option>
+             <option>1-2</option>
+             <option>3-5</option>
+             <option>6-10</option>
+             <option>10+</option>
+          </select>
+          <br>
+          <label>VIP Option</label>
+          <select name="vip_type" required>
+             <option value="">Choose Option</option>
+             <option>VIP Table</option>
+             <option>VIP Section</option>
+          </select>
+          <br>
+          <textarea name="notes" placeholder="Special Requests"></textarea>
+          <br>
+          <button type="submit">Book Now</button>
+          </form>
+        </div>
+    </body>
+</html>
