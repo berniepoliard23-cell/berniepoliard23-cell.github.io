@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basketball Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🏀 Basketball Shootout</h1>
+
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p>Shots: <span id="shots">0</span></p>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <p class="instructions">
+            Use ← → arrow keys to move.
+            Press SPACE to shoot!
+        </p>
+
+        <button id="restartBtn">Restart Game</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

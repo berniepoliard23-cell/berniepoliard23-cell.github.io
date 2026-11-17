@@ -1,0 +1,939 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+#Pearls-navbar {
+    width: 100%;
+    min-height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 7%;
+
+    background: #111111;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    transition: all 0.3s ease;
+}
+
+
+#Pearls-navbar.scrolled {
+    min-height: 75px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+
+#logo-container img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+
+#logo-container img:hover {
+    transform: scale(1.08);
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.button {
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: color 0.3s ease;
+}
+
+
+.button:hover {
+    color: #d4af37;
+}
+
+
+/* Animated underline */
+
+.button::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d4af37;
+
+    transition: width 0.3s ease;
+}
+
+
+.button:hover::after {
+    width: 100%;
+}
+
+
+/* ORDER BUTTON */
+
+.cta-button {
+    background: #d4af37;
+
+    color: #111;
+
+    padding: 12px 22px;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+
+.cta-button:hover {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("image/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.35);
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 40px 20px;
+
+    color: white;
+
+    animation: heroFade 1.5s ease;
+}
+
+
+.hero-content h2 {
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #d4af37;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 7vw, 85px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+.hero-content p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    margin-bottom: 35px;
+
+    color: #eeeeee;
+}
+
+
+/* HERO BUTTON */
+
+.hero-btn {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #d4af37;
+
+    color: #111;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+
+    transition: all 0.3s ease;
+}
+
+
+.hero-btn:hover {
+    background: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* HERO ANIMATION */
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================= */
+/* WELCOME SECTION */
+/* ============================= */
+
+.welcome-section {
+    padding: 100px 8%;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+.welcome-content {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.welcome-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    margin-bottom: 20px;
+
+    color: #111;
+}
+
+
+.gold-line {
+    width: 80px;
+
+    height: 3px;
+
+    background: #d4af37;
+
+    margin: 20px auto 35px;
+}
+
+
+.description {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #555;
+
+    text-align: center;
+}
+
+
+/* ============================= */
+/* EXPERIENCE SECTION */
+/* ============================= */
+
+.experience-section {
+    padding: 100px 8%;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.experience-section h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    margin-bottom: 60px;
+
+    color: #d4af37;
+
+    letter-spacing: 2px;
+}
+
+
+.experience-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* EXPERIENCE CARD */
+
+.experience-card {
+    background: #1c1c1c;
+
+    padding: 50px 30px;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
+
+    cursor: pointer;
+}
+
+
+.experience-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+.icon {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.experience-card:hover .icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+.experience-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+
+    color: #d4af37;
+}
+
+
+.experience-card p {
+    color: #cccccc;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================= */
+/* RESERVATION SECTION */
+/* ============================= */
+
+.reservation-section {
+    padding: 110px 8%;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("image/reservation.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+.reservation-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.reservation-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    margin-bottom: 20px;
+}
+
+
+.reservation-content p {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.Pearl-footer {
+    background: #0a0a0a;
+
+    color: #cccccc;
+
+    padding-top: 80px;
+}
+
+
+.Pearl-footer-container {
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 0 8% 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+/* FOOTER LOGO */
+
+.Pearl-footer-logo {
+    width: 120px;
+
+    margin-bottom: 20px;
+}
+
+
+.Pearl p {
+    max-width: 350px;
+
+    line-height: 1.8;
+}
+
+
+/* FOOTER HEADINGS */
+
+.Pearl-footer-column h3 {
+    color: #d4af37;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+}
+
+
+/* FOOTER LINKS */
+
+.Pearl-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.Pearl-footer-column a {
+    color: #cccccc;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.Pearl-footer-column a:hover {
+    color: #d4af37;
+
+    padding-left: 5px;
+}
+
+
+.Pearl-footer-column p {
+    line-height: 1.7;
+}
+
+
+/* SOCIAL LINKS */
+
+.Pearl-social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+.Pearl-social-links a {
+    border: 1px solid #444;
+
+    padding: 8px 12px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+
+.Pearl-social-links a:hover {
+    background: #d4af37;
+
+    color: #111;
+
+    border-color: #d4af37;
+}
+
+
+/* FOOTER ORDER BUTTON */
+
+.Pearl-footer-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 20px;
+
+    background: #d4af37;
+
+    color: #111 !important;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+
+.Pearl-footer-btn:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ============================= */
+/* FOOTER BOTTOM */
+/* ============================= */
+
+.Pearl-footer-bottom {
+    border-top: 1px solid #222;
+
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    font-size: 14px;
+}
+
+
+.Pearl-footer-legal {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.Pearl-footer-legal a {
+    color: #999;
+
+    transition: color 0.3s ease;
+}
+
+
+.Pearl-footer-legal a:hover {
+    color: #d4af37;
+}
+
+
+/* ============================= */
+/* SCROLL REVEAL ANIMATION */
+/* ============================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 950px) {
+
+    .experience-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .Pearl-footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    #Pearls-navbar {
+        padding: 10px 6%;
+        min-height: 80px;
+    }
+
+
+    #logo-container img {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .nav-links {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: #111;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 30px 20px;
+
+        transform: translateY(-20px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: all 0.3s ease;
+
+        border-top: 1px solid #222;
+    }
+
+
+    .nav-links.active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    .button {
+        font-size: 17px;
+    }
+
+
+    .hero {
+        min-height: 80vh;
+
+        background-attachment: scroll;
+    }
+
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+
+    .welcome-section,
+    .experience-section,
+    .reservation-section {
+        padding:
+            75px 6%;
+    }
+
+
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .reservation-section {
+        background-attachment: scroll;
+    }
+
+
+    .Pearl-footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .Pearl-footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+    .experience-card {
+        padding: 40px 20px;
+    }
+
+
+    .Pearl-social-links {
+        flex-direction: column;
+    }
+
+
+    .Pearl-social-links a {
+        text-align: center;
+    }
+
+}
+
+.experience-card.selected {
+    border-color: #d4af37;
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(212, 175, 55, 0.25);
+}
+

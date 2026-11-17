@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Douce Order Now Page</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -12,9 +16,2673 @@
                 <img src="image/doucelogo.jpg" alt="doucelogo" width="100" 
                 height="100">
             </a>
-             <a href="Home-page.html" class="button">Home</a>
-             <a href="Gallery.html" class="button">Gallery</a>
-             <a href="Menu.html" class="button">Menu</a>
-             <a href="AboutUs.html" class="button">About Us</a>
-             <a href="ordernow.html" class="cta-button">Order Now</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Home/home.html?vscode-livepreview=true" class="button">Home</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Gallery/gallery.html?vscode-livepreview=true" class="button">Gallery</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Menu/menu.html?vscode-livepreview=" class="button">Menu</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/About-Us/aboutus.html?vscode-livepreview=true" class="button">About Us</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Order-Now/ordernow.html?vsco" class="cta-button">Order Now</a>
+             
+              <button class="cart-button" onclick="openCart()">
+               🛒 Cart (<span id="cartCount">0</span>)
+              </button>
+             
         </div>
+    <body>
+
+<section class="hero">
+  <div class="hero-content">
+  <p class="eyebrow"> ORDER NOW!!!</p>
+  <h1>Choose your favorite meals and add them to your cart.</h1>
+</div>
+</section>
+
+<main class="container">
+
+  <!-- CATEGORY MENU -->
+
+  <div class="section-title">
+    <h2>Our Menu</h2>
+  </div>
+
+  <!-- APPETIZERS -->
+  <section class="menu-section" id="appetizers">
+
+    <div class="section-title">
+      <p>START WITH SOMETHING DELICIOUS</p>
+      <h2>APPETIZERS</h2>
+    </div>
+
+    <div class="menu-grid">
+
+
+      <!-- ACRA -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
+             alt="Acra">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>ACRA (5)</h3>
+            <span>$9</span>
+          </div>
+
+          <p>SERVED WITH PIKLIZ</p>
+
+          <button onclick="addToCart('Acra (5)', 9)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- MARINADE -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80"
+             alt="Marinade Poulet">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>MARINADE POULET</h3>
+            <span>$7</span>
+          </div>
+
+          <p>CHICKEN SERVED WITH PIKLIZ</p>
+
+          <button onclick="addToCart('Marinade Poulet', 7)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- GRIOT TACOS -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=900&q=80"
+             alt="Griot Tacos">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>GRIOT TACOS (3)</h3>
+            <span>$12</span>
+          </div>
+
+          <p>CHOOSE HARD OR SOFT TACO CUPS</p>
+
+          <select id="griot-taco-option">
+            <option>Soft Taco</option>
+            <option>Hard Taco</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Griot Tacos (3)',
+            12,
+            'griot-taco-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- TURKEY TACOS -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=900&q=80"
+             alt="Turkey Tacos">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>TURKEY TACOS (3)</h3>
+            <span>$12</span>
+          </div>
+
+          <p>CHOOSE HARD OR SOFT TACO CUPS</p>
+
+          <select id="turkey-taco-option">
+            <option>Soft Taco</option>
+            <option>Hard Taco</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Turkey Tacos (3)',
+            12,
+            'turkey-taco-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- SHRIMP TACOS -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=900&q=80"
+             alt="Shrimp Tacos">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SHRIMP SOFT TACOS (3)</h3>
+            <span>$15</span>
+          </div>
+
+          <button onclick="addToCart('Shrimp Soft Tacos (3)', 15)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- WINGS -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=900&q=80"
+             alt="Chicken Wings">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>CHICKEN WINGS ONLY (10)</h3>
+            <span>$12</span>
+          </div>
+
+          <p>PLAIN, BBQ, HOT, LEMON PEPPER OR JERK</p>
+
+          <select id="wings-option">
+            <option>Plain</option>
+            <option>BBQ</option>
+            <option>Hot</option>
+            <option>Lemon Pepper</option>
+            <option>Jerk</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Chicken Wings (10)',
+            12,
+            'wings-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- JERK GRIOT -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
+             alt="Jerk Griot">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>JERK GRIOT KABOBS</h3>
+            <span>$12</span>
+          </div>
+
+          <p>CUBED PORK MEAT ON A SKEWER</p>
+
+          <button onclick="addToCart('Jerk Griot Kabobs', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- CONCH FRITTERS -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=80"
+             alt="Conch Fritters">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>CONCH FRITTERS</h3>
+            <span>$14</span>
+          </div>
+
+          <p>BAHAMIAN STYLE</p>
+
+          <button onclick="addToCart('Conch Fritters', 14)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- CALAMARI -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1598514982205-fbeef5c2e3b8?auto=format&fit=crop&w=900&q=80"
+             alt="Fried Calamari">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>FRIED CALAMARI</h3>
+            <span>$16</span>
+          </div>
+
+          <button onclick="addToCart('Fried Calamari', 16)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- PATE KODE -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+             alt="Pate Kode">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>PATE KODE</h3>
+            <span>$8</span>
+          </div>
+
+          <p>GRIOT, CHICKEN OR HOTDOG</p>
+
+          <select id="pate-option">
+            <option>Griot</option>
+            <option>Chicken</option>
+            <option>Hotdog</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Pate Kode',
+            8,
+            'pate-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- SALMON BITES -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80"
+             alt="Salmon Bites">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SALMON BITES</h3>
+            <span>$18</span>
+          </div>
+
+          <button onclick="addToCart('Salmon Bites', 18)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- FRITAY -->
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=900&q=80"
+             alt="Fritay Sampler">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>FRITAY SAMPLER</h3>
+            <span>$24</span>
+          </div>
+
+          <p>
+            ACRA, MARINADE, FRIED PLANTAINS & 1 MEAT
+          </p>
+
+          <select id="fritay-option">
+            <option>Griot</option>
+            <option>Turkey</option>
+            <option value="Goat + $8">Goat + $8</option>
+          </select>
+
+          <button onclick="addFritay()">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DESSERT -->
+  <section class="menu-section" id="sweet">
+
+    <div class="section-title">
+      <p>SOMETHING SWEET</p>
+      <h2>EMMA'S SWEET DELIGHT</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+             alt="Cremas Cake">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>CREMAS CAKE</h3>
+            <span>$7</span>
+          </div>
+
+          <p>VANILLA CAKE SOAKED IN HAITIAN CREMAS</p>
+
+          <button onclick="addToCart('Cremas Cake', 7)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOUP -->
+  <section class="menu-section dark-section" id="soup">
+
+    <div class="section-title">
+      <p>TRADITIONAL FLAVORS</p>
+      <h2>SOUP</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>BOUILLON</h3>
+            <span>$17</span>
+          </div>
+
+          <p>
+            GOAT HEAD (TET CABRIT)
+            <br>
+            AVAILABLE SATURDAY & THURSDAY
+          </p>
+
+          <button onclick="addToCart('Bouillon', 17)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COCKTAILS -->
+  <section class="menu-section" id="cocktails">
+
+    <div class="section-title">
+      <p>SIP SOMETHING AMAZING</p>
+      <h2>COCKTAILS</h2>
+    </div>
+
+    <div class="menu-grid">
+
+
+      <div class="menu-card cocktail-card">
+
+        <img src="https://images.unsplash.com/photo-1473973916745-60839aebf06d?auto=format&fit=crop&w=900&q=80">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>THE DOUCE COCKTAIL</h3>
+            <span>$12</span>
+          </div>
+
+          <p>
+            AUTHENTIC HAITIAN KAKI RUM,
+            ORANGE JUICE, PINEAPPLE JUICE
+            & PASSION FRUIT JUICE
+          </p>
+
+          <button onclick="addToCart('The Douce Cocktail', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card cocktail-card">
+
+        <img src="https://images.unsplash.com/photo-1575023782549-62ca0d244b39?auto=format&fit=crop&w=900&q=80">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>PINA COLADA</h3>
+            <span>$12</span>
+          </div>
+
+          <p>
+            SPICED RUM, PINEAPPLE JUICE
+            & COCONUT CREAM
+          </p>
+
+          <button onclick="addToCart('Pina Colada', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card cocktail-card">
+
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>RUM PUNCH</h3>
+            <span>$12</span>
+          </div>
+
+          <p>
+            COCONUT RUM & MIX OF FRESH JUICES,
+            SPLASH OF GRENADINE
+          </p>
+
+          <button onclick="addToCart('Rum Punch', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card cocktail-card">
+
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SEX ON THE BEACH</h3>
+            <span>$12</span>
+          </div>
+
+          <p>
+            HOUSE VODKA, PEACH SCHNAPPS,
+            ORANGE JUICE & CRANBERRY JUICE
+          </p>
+
+          <button onclick="addToCart('Sex on the Beach', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card cocktail-card">
+
+        <img src="https://images.unsplash.com/photo-1563223771-375783ee91ad?auto=format&fit=crop&w=900&q=80">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>LONG ISLAND ICE TEA</h3>
+            <span>$12</span>
+          </div>
+
+          <p>
+            CLASSIC, RED OR BLUE
+          </p>
+
+          <select id="long-island-option">
+            <option>Classic</option>
+            <option>Red</option>
+            <option>Blue</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Long Island Ice Tea',
+            12,
+            'long-island-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card cocktail-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>INCREDIBLE HULK</h3>
+            <span>$12</span>
+          </div>
+
+          <button onclick="addToCart('Incredible Hulk', 12)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PREMIUM COCKTAILS -->
+
+    <div class="premium-title">
+      <h2>PREMIUM COCKTAILS</h2>
+    </div>
+
+
+    <div class="menu-grid">
+
+      <div class="menu-card premium">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>"KLASS IT IS BABY"</h3>
+            <span>$23</span>
+          </div>
+
+          <p>
+            TEQUILA, VODKA, GIN, RUM,
+            TRIPLE SEC & JUICE
+          </p>
+
+          <button onclick="addToCart('Klass It Is Baby', 23)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card premium">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>"YES IT IS BABY"</h3>
+            <span>$23</span>
+          </div>
+
+          <p>
+            VODKA, GIN, RUM,
+            STRAWBERRY & ORANGE
+          </p>
+
+          <button onclick="addToCart('Yes It Is Baby', 23)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card premium">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>"KISS & TELL"</h3>
+            <span>$23</span>
+          </div>
+
+          <p>
+            APPLETON RUM, BACARDI PINEAPPLE,
+            ORANGE & LIME JUICE
+          </p>
+
+          <button onclick="addToCart('Kiss & Tell', 23)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BIG ALS CORNER -->
+  <section class="menu-section dark-section" id="bigals">
+
+    <div class="section-title">
+      <p>COMFORT FOOD</p>
+      <h2>BIG AL'S CORNER</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>CHICKEN PASTA</h3>
+            <span>$18</span>
+          </div>
+
+          <p>
+            TOSSED IN ALFREDO CREAM SAUCE.
+            ADD SHRIMP $9 OR SALMON $18
+          </p>
+
+          <button onclick="addToCart('Chicken Pasta', 18)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>DOUCÉ'S HOUSE SALAD</h3>
+            <span>$10</span>
+          </div>
+
+          <p>
+            ROMAINE LETTUCE, ONIONS & TOMATOES.
+            ADD CHICKEN $5
+          </p>
+
+          <button onclick="addToCart('Douce House Salad', 10)">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SHRIMP PASTA</h3>
+            <span>$22</span>
+          </div>
+
+          <p>
+            ADD SALMON $18 OR CHICKEN $8
+          </p>
+
+          <button onclick="addToCart('Shrimp Pasta', 22)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SALMON PASTA</h3>
+            <span>$24</span>
+          </div>
+
+          <p>
+            ADD CHICKEN $8 OR SHRIMP $9
+          </p>
+
+          <button onclick="addToCart('Salmon Pasta', 24)">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEAFOOD -->
+  <section class="menu-section" id="seafood">
+
+    <div class="section-title">
+      <p>FROM THE SEA</p>
+      <h2>SEAFOOD</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>WHOLE SNAPPER</h3>
+            <span>$41</span>
+          </div>
+
+          <p>
+            CHOOSE GRILLED, FRIED, STEAMED
+            OR CREOLE SAUCE
+          </p>
+
+          <select id="snapper-option">
+            <option>Grilled</option>
+            <option>Fried</option>
+            <option>Steamed</option>
+            <option>Creole Sauce</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Whole Snapper',
+            41,
+            'snapper-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SALMON</h3>
+            <span>$23</span>
+          </div>
+
+          <p>
+            BLACKENED OR CREOLE SAUCE
+          </p>
+
+          <select id="salmon-option">
+            <option>Blackened</option>
+            <option>Creole Sauce</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Salmon',
+            23,
+            'salmon-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SHRIMP DINNER</h3>
+            <span>$22</span>
+          </div>
+
+          <select id="shrimp-option">
+            <option>Grilled</option>
+            <option>Fried</option>
+            <option>In Sauce</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Shrimp Dinner',
+            22,
+            'shrimp-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>CONCH (LAMBI)</h3>
+            <span>$35</span>
+          </div>
+
+          <select id="conch-option">
+            <option>Grilled</option>
+            <option>Fried</option>
+            <option>Creole Sauce</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Conch (Lambi)',
+            35,
+            'conch-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-info">
+
+          <div class="item-title">
+            <h3>SNAPPER FILLET</h3>
+            <span>$23</span>
+          </div>
+
+          <select id="fillet-option">
+            <option>Blackened</option>
+            <option>Creole Sauce</option>
+            <option>Fried</option>
+          </select>
+
+          <button onclick="addOptionToCart(
+            'Snapper Fillet',
+            23,
+            'fillet-option'
+          )">
+            ADD TO CART
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CUSTOMER FAVORITES -->
+  <section class="menu-section dark-section" id="meats">
+
+    <div class="section-title">
+      <p>AUTHENTIC HAITIAN CUISINE</p>
+      <h2>CUSTOMER FAVORITE MEATS</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>QUEUE BOEUF (OXTAIL)</h3>
+            <span>$28</span>
+          </div>
+          <p>SERVED WITH RICE OF THE DAY & FRIED PLANTAINS</p>
+          <button onclick="addToCart('Queue Boeuf (Oxtail)', 28)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>BOULETTE</h3>
+            <span>$22</span>
+          </div>
+          <p>HAITIAN STYLE BEEF OR TURKEY MEATBALL</p>
+
+          <select id="boulette-option">
+            <option>Beef</option>
+            <option>Turkey</option>
+          </select>
+
+          <button onclick="addOptionToCart('Boulette', 22, 'boulette-option')">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>GRIOT (FRIED PORK)</h3>
+            <span>$22</span>
+          </div>
+          <p>SERVED WITH RICE, FRIED PLANTAINS & PIKLIZ</p>
+          <button onclick="addToCart('Griot', 22)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>CABRIT (GOAT)</h3>
+            <span>$26</span>
+          </div>
+
+          <select id="goat-option">
+            <option>Fried</option>
+            <option>Grilled</option>
+            <option>In Sauce</option>
+          </select>
+
+          <button onclick="addOptionToCart('Cabrit (Goat)', 26, 'goat-option')">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>TASSOT TURKEY</h3>
+            <span>$22</span>
+          </div>
+          <p>SERVED WITH RICE, PLANTAINS & PIKLIZ</p>
+          <button onclick="addToCart('Tassot Turkey', 22)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>LEGUME W/ OXTAIL</h3>
+            <span>$22</span>
+          </div>
+          <p>ADD CONCH OR SHRIMP $9</p>
+          <button onclick="addToCart('Legume with Oxtail', 22)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>JERK CHICKEN</h3>
+            <span>$18</span>
+          </div>
+          <p>LEG QUARTER WITH HOMEMADE JERK SEASONING</p>
+          <button onclick="addToCart('Jerk Chicken', 18)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>POULETTE EN SAUCE</h3>
+            <span>$18</span>
+          </div>
+          <p>STEW CHICKEN WITH RICE, PLANTAINS & PIKLIZ</p>
+          <button onclick="addToCart('Poulette En Sauce', 18)">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-title">
+            <h3>BOUILLON CABRIT</h3>
+            <span>$18</span>
+          </div>
+          <p>MADE WITH SMOKED GOAT MEAT</p>
+          <button onclick="addToCart('Bouillon Cabrit', 18)">ADD TO CART</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SIDES -->
+  <section class="menu-section" id="sides">
+
+    <div class="section-title">
+      <p>COMPLETE YOUR MEAL</p>
+      <h2>SIDES</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="side-item">
+        <span>FRENCH FRIES</span>
+        <strong>$5</strong>
+        <button onclick="addToCart('French Fries', 5)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>FRIED PATATE</span>
+        <strong>$6</strong>
+        <button onclick="addToCart('Fried Patate', 6)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>FRIED / SWEET PLANTAINS</span>
+        <strong>$5</strong>
+        <button onclick="addToCart('Plantains', 5)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>LAM VERITAB</span>
+        <strong>$6</strong>
+        <button onclick="addToCart('Lam Veritab', 6)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>RICE OF THE DAY</span>
+        <strong>$6</strong>
+        <button onclick="addToCart('Rice of the Day', 6)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>WHITE RICE</span>
+        <strong>$6</strong>
+        <button onclick="addToCart('White Rice', 6)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>MACARONI & CHEESE</span>
+        <strong>$7</strong>
+        <button onclick="addToCart('Macaroni & Cheese', 7)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>STEAMED VEGGIES</span>
+        <strong>$6</strong>
+        <button onclick="addToCart('Steamed Veggies', 6)">+</button>
+      </div>
+
+      <div class="side-item">
+        <span>CORNMEAL (MAIS)</span>
+        <strong>$7</strong>
+        <button onclick="addToCart('Cornmeal', 7)">+</button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CHECKOUT -->
+
+  <section class="checkout-section" id="checkoutSection">
+
+    <h2>Checkout & Payment</h2>
+
+    <div class="checkout-grid">
+
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group full">
+        <label for="orderType">Order Type</label>
+        <select id="orderType">
+          <option value="pickup">Pickup</option>
+          <option value="delivery">Delivery</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label for="address">Delivery Address</label>
+        <input
+          type="text"
+          id="address"
+          placeholder="Enter delivery address">
+      </div>
+
+    </div>
+
+
+    <!-- PAYMENT -->
+
+    <div class="payment-box">
+
+      <h3>Payment Information</h3>
+
+      <br>
+
+      <div class="form-group">
+        <label for="cardName">Name on Card</label>
+        <input type="text" id="cardName">
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input
+          type="text"
+          id="cardNumber"
+          maxlength="19"
+          placeholder="1234 5678 9012 3456">
+      </div>
+
+      <br>
+
+      <div class="checkout-grid">
+
+        <div class="form-group">
+          <label for="expiry">Expiration Date</label>
+          <input
+            type="text"
+            id="expiry"
+            placeholder="MM/YY">
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input
+            type="password"
+            id="cvv"
+            maxlength="4"
+            placeholder="123">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$<span id="checkoutSubtotal">0.00</span></span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax</span>
+        <span>$<span id="checkoutTax">0.00</span></span>
+      </div>
+
+      <div class="summary-row">
+        <span>Delivery</span>
+        <span>$<span id="checkoutDelivery">0.00</span></span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>$<span id="checkoutTotal">0.00</span></span>
+      </div>
+
+    </div>
+
+    <button class="place-order" onclick="placeOrder()">
+      🔒 Place Order & Pay
+    </button>
+
+    <button class="back-btn" onclick="backToMenu()">
+      ← Back to Menu
+    </button>
+
+    <div class="success-message" id="successMessage">
+      <h3>🎉 Order Received!</h3>
+      <p>Your order has been successfully submitted.</p>
+      <p>Thank you for ordering from Big Al's.</p>
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- CART -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+  <div class="cart">
+
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+
+      <button class="close-cart" onclick="closeCart()">
+        &times;
+      </button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$<span id="subtotal">0.00</span></span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax (7%)</span>
+        <span>$<span id="tax">0.00</span></span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>$<span id="total">0.00</span></span>
+      </div>
+
+      <button class="checkout-btn" onclick="goToCheckout()">
+        Proceed to Checkout →
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  
+<footer class="douce-footer">
+
+<div class="douce-footer-container">
+
+    <!-- About Douce -->
+    <div class="douce-footer-column">
+        <img src="image/doucelogo.jpg"
+             alt="Douce Restaurant and Lounge Logo"
+             class="douce-footer-logo">
+
+        <p>
+            Douce Restaurant and Lounge brings together refined dining,
+            vibrant culture, music, and an unforgettable atmosphere.
+            Come enjoy delicious flavors, great vibes, and memorable
+            moments.
+        </p>
+    </div>
+
+
+    <!-- Quick Links -->
+    <div class="douce-footer-column">
+        <h3>Quick Links</h3>
+
+        <a href="http://127.0.0.1:3000/Douce-Lounge/Home/home.html?vscode-livepreview=true" class="button">Home</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Gallery/gallery.html?vscode-livepreview=true" class="button">Gallery</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Menu/menu.html?vscode-livepreview=" class="button">Menu</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/About-Us/aboutus.html?vscode-livepreview=true" class="button">About Us</a>
+             <a href="http://127.0.0.1:3000/Douce-Lounge/Order-Now/ordernow.html?vsco"> Order Now</a>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="douce-footer-column">
+        <h3>Contact Us</h3>
+
+        <p>
+            <strong>Location</strong><br>
+            2640 South State Road 7,<br>
+            Miramar, FL 33023
+        </p>
+
+        <p>
+            <strong>Phone</strong><br>
+            <a href="tel:+19543675720">
+                (954) 367-5720
+            </a>
+        </p>
+
+        <p>
+            <strong>Email</strong><br>
+            <a href="mailto:doucelounge4@gmail.com">
+                doucelounge4@gmail.com
+            </a>
+        </p>
+    </div>
+
+
+    <!-- Follow Us -->
+    <div class="douce-footer-column">
+        <h3>Follow Us</h3>
+
+        <p>
+            Follow Douce Restaurant and Lounge
+            for food, music, events, and special
+            announcements.
+        </p>
+
+        <div class="douce-social-links">
+            <a href="https://www.instagram.com/doucelounge/?hl=en" 
+            aria-label="https://www.instagram.com/doucelounge/?hl=en">
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/doucerestaurantandlounge/" aria-label="https://www.facebook.com/doucerestaurantandlounge/">
+                Facebook
+            </a>
+
+            <a href="https://www.tiktok.com/discover/douce-restaurant-lounge" aria-label="">
+                TikTok
+            </a>
+        </div>
+
+        <a href="../Order-Now/ordernow.html"
+           class="douce-footer-btn">
+            Order Now
+        </a>
+    </div>
+
+</div>
+
+
+<!-- Bottom Footer -->
+
+<div class="douce-footer-bottom">
+
+    <p>
+        &copy; 2026 Douce Restaurant and Lounge.
+        All Rights Reserved.
+    </p>
+
+    <div class="douce-footer-legal">
+        <a href="#">Privacy Policy</a>
+        <span>|</span>
+        <a href="#">Terms & Conditions</a>
+    </div>
+
+</div>
+
+</footer>
+
+<script>
+
+let cart = [];
+
+
+/* =========================================
+   SAVE CART
+========================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        "douceCart",
+        JSON.stringify(cart)
+    );
+
+}
+
+
+/* =========================================
+   LOAD CART
+========================================= */
+
+function loadCart() {
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem("douceCart")
+            ) || [];
+
+    }
+
+    catch (error) {
+
+        cart = [];
+
+    }
+
+    updateCart();
+
+}
+
+
+/* =========================================
+   DISPLAY MENU
+========================================= */
+
+function displayMenu() {
+
+    if (typeof menu === "undefined") {
+
+        console.warn(
+            "The menu object was not found."
+        );
+
+        return;
+
+    }
+
+
+    for (const category in menu) {
+
+        const container =
+            document.getElementById(
+                category + "-items"
+            );
+
+
+        if (!container) continue;
+
+
+        container.innerHTML = "";
+
+
+        menu[category].forEach(
+            (item, index) => {
+
+                const card =
+                    document.createElement("div");
+
+
+                card.className =
+                    "menu-item";
+
+
+                card.innerHTML = `
+
+                    <h3>
+                        ${escapeHtml(item.name)}
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(
+                            item.description || ""
+                        )}
+                    </p>
+
+                    <div class="item-bottom">
+
+                        <span class="price">
+
+                            $${Number(
+                                item.price
+                            ).toFixed(2)}
+
+                        </span>
+
+
+                        <button
+                            class="add-btn"
+                            onclick="addMenuItemToCart('${category}', ${index})">
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                container.appendChild(card);
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   ADD MENU ITEM TO CART
+
+   Used by dynamically generated menu items
+========================================= */
+
+function addMenuItemToCart(
+    category,
+    index
+) {
+
+    if (
+        typeof menu === "undefined" ||
+        !menu[category] ||
+        !menu[category][index]
+    ) {
+
+        return;
+
+    }
+
+
+    const item =
+        menu[category][index];
+
+
+    addToCart(
+        item.name,
+        item.price,
+        ""
+    );
+
+}
+
+
+/* =========================================
+   ADD TO CART
+
+   Main universal cart function
+========================================= */
+
+function addToCart(
+    name,
+    price,
+    option = ""
+) {
+
+    const numericPrice =
+        Number(price);
+
+
+    if (
+        !name ||
+        isNaN(numericPrice)
+    ) {
+
+        console.error(
+            "Invalid item added to cart."
+        );
+
+        return;
+
+    }
+
+
+    const key =
+        name + "|" + option;
+
+
+    const existingItem =
+        cart.find(
+            item =>
+                item.key === key
+        );
+
+
+    if (existingItem) {
+
+        existingItem.quantity++;
+
+    }
+
+    else {
+
+        cart.push({
+
+            key: key,
+
+            name: name,
+
+            price: numericPrice,
+
+            option: option,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+    openCart();
+
+}
+
+
+/* =========================================
+   ADD ITEM WITH SELECT OPTION
+========================================= */
+
+function addOptionToCart(
+    name,
+    price,
+    selectId
+) {
+
+    const select =
+        document.getElementById(
+            selectId
+        );
+
+
+    const option =
+        select
+            ? select.value
+            : "";
+
+
+    addToCart(
+        name,
+        price,
+        option
+    );
+
+}
+
+
+/* =========================================
+   FRITAY OPTIONS
+========================================= */
+
+function addFritay() {
+
+    const select =
+        document.getElementById(
+            "fritay-option"
+        );
+
+
+    const option =
+        select
+            ? select.value
+            : "Griot";
+
+
+    let price = 24;
+
+
+    if (
+        option
+            .toLowerCase()
+            .includes("goat")
+    ) {
+
+        price += 8;
+
+    }
+
+
+    addToCart(
+        "Fritay Sampler",
+        price,
+        option
+    );
+
+}
+
+
+/* =========================================
+   CHANGE QUANTITY
+========================================= */
+
+function changeQuantity(
+    index,
+    amount
+) {
+
+    if (!cart[index]) {
+
+        return;
+
+    }
+
+
+    cart[index].quantity +=
+        amount;
+
+
+    if (
+        cart[index].quantity <= 0
+    ) {
+
+        cart.splice(
+            index,
+            1
+        );
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* =========================================
+   REMOVE FROM CART
+========================================= */
+
+function removeFromCart(
+    index
+) {
+
+    if (!cart[index]) {
+
+        return;
+
+    }
+
+
+    cart.splice(
+        index,
+        1
+    );
+
+
+    saveCart();
+
+    updateCart();
+
+}
+
+
+/* =========================================
+   GET SUBTOTAL
+========================================= */
+
+function getSubtotal() {
+
+    return cart.reduce(
+
+        (
+            total,
+            item
+        ) =>
+
+            total +
+            (
+                item.price *
+                item.quantity
+            ),
+
+        0
+
+    );
+
+}
+
+
+/* =========================================
+   UPDATE CART
+========================================= */
+
+function updateCart() {
+
+    const cartContainer =
+        document.getElementById(
+            "cartItems"
+        );
+
+
+    const cartCount =
+        document.getElementById(
+            "cartCount"
+        );
+
+
+    const subtotalValue =
+        getSubtotal();
+
+
+    const taxValue =
+        subtotalValue * 0.07;
+
+
+    const totalValue =
+        subtotalValue +
+        taxValue;
+
+
+    /* -------------------------
+       UPDATE CART COUNT
+    ------------------------- */
+
+    const totalItems =
+        cart.reduce(
+
+            (
+                total,
+                item
+            ) =>
+
+                total +
+                item.quantity,
+
+            0
+
+        );
+
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            totalItems;
+
+    }
+
+
+    /* -------------------------
+       UPDATE CART DISPLAY
+    ------------------------- */
+
+    if (cartContainer) {
+
+        if (cart.length === 0) {
+
+            cartContainer.innerHTML = `
+
+                <div class="empty-cart">
+
+                    <h3>
+                        Your cart is empty
+                    </h3>
+
+                    <p>
+                        Add something delicious!
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+        else {
+
+            cartContainer.innerHTML =
+                cart.map(
+
+                    (
+                        item,
+                        index
+                    ) => `
+
+                    <div class="cart-item">
+
+                        <div class="cart-item-info">
+
+                            <h4>
+                                ${escapeHtml(
+                                    item.name
+                                )}
+                            </h4>
+
+
+                            ${
+                                item.option
+                                    ? `
+                                    <span class="cart-item-option">
+
+                                        ${escapeHtml(
+                                            item.option
+                                        )}
+
+                                    </span>
+                                    `
+                                    : ""
+                            }
+
+
+                            <span class="cart-item-price">
+
+                                $${Number(
+                                    item.price
+                                ).toFixed(2)}
+                                each
+
+                            </span>
+
+
+                        </div>
+
+
+                        <div class="quantity-controls">
+
+                            <button
+                                onclick="changeQuantity(${index}, -1)">
+
+                                −
+
+                            </button>
+
+
+                            <strong>
+
+                                ${item.quantity}
+
+                            </strong>
+
+
+                            <button
+                                onclick="changeQuantity(${index}, 1)">
+
+                                +
+
+                            </button>
+
+
+                            <button
+                                class="remove-item"
+                                onclick="removeFromCart(${index})">
+
+                                Remove
+
+                            </button>
+
+                        </div>
+
+
+                        <strong class="item-total">
+
+                            $${(
+                                item.price *
+                                item.quantity
+                            ).toFixed(2)}
+
+                        </strong>
+
+                    </div>
+
+                `
+
+                ).join("");
+
+        }
+
+    }
+
+
+    /* -------------------------
+       UPDATE TOTALS
+    ------------------------- */
+
+    updateTotals(
+        subtotalValue,
+        taxValue,
+        totalValue
+    );
+
+}
+
+
+/* =========================================
+   UPDATE TOTALS
+========================================= */
+
+function updateTotals(
+    subtotalValue = getSubtotal(),
+    taxValue = subtotalValue * 0.07,
+    totalValue = subtotalValue + taxValue
+) {
+
+    const totals = {
+
+        subtotal:
+            subtotalValue,
+
+        tax:
+            taxValue,
+
+        total:
+            totalValue
+
+    };
+
+
+    const elements = {
+
+        subtotal:
+            document.getElementById(
+                "subtotal"
+            ),
+
+        tax:
+            document.getElementById(
+                "tax"
+            ),
+
+        total:
+            document.getElementById(
+                "total"
+            ),
+
+        checkoutSubtotal:
+            document.getElementById(
+                "checkoutSubtotal"
+            ),
+
+        checkoutTax:
+            document.getElementById(
+                "checkoutTax"
+            ),
+
+        checkoutTotal:
+            document.getElementById(
+                "checkoutTotal"
+            )
+
+    };
+
+
+    if (elements.subtotal) {
+
+        elements.subtotal.textContent =
+            totals.subtotal.toFixed(2);
+
+    }
+
+
+    if (elements.tax) {
+
+        elements.tax.textContent =
+            totals.tax.toFixed(2);
+
+    }
+
+
+    if (elements.total) {
+
+        elements.total.textContent =
+            totals.total.toFixed(2);
+
+    }
+
+
+    if (
+        elements.checkoutSubtotal
+    ) {
+
+        elements
+            .checkoutSubtotal
+            .textContent =
+                totals
+                    .subtotal
+                    .toFixed(2);
+
+    }
+
+
+    if (
+        elements.checkoutTax
+    ) {
+
+        elements
+            .checkoutTax
+            .textContent =
+                totals
+                    .tax
+                    .toFixed(2);
+
+    }
+
+
+    if (
+        elements.checkoutTotal
+    ) {
+
+        elements
+            .checkoutTotal
+            .textContent =
+                totals
+                    .total
+                    .toFixed(2);
+
+    }
+
+
+    /* Optional delivery total */
+
+    const delivery =
+        document.getElementById(
+            "checkoutDelivery"
+        );
+
+
+    if (delivery) {
+
+        delivery.textContent =
+            "0.00";
+
+    }
+
+}
+
+
+/* =========================================
+   OPEN CART
+========================================= */
+
+function openCart() {
+
+    const overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+
+    if (!overlay) return;
+
+
+    /* Works with class-based cart CSS */
+
+    overlay.classList.add(
+        "active"
+    );
+
+
+    /* Backup for display-based CSS */
+
+    overlay.style.display =
+        "flex";
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =========================================
+   CLOSE CART
+========================================= */
+
+function closeCart() {
+
+    const overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+
+    if (!overlay) return;
+
+
+    overlay.classList.remove(
+        "active"
+    );
+
+
+    overlay.style.display =
+        "none";
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================
+   GO TO CHECKOUT
+========================================= */
+
+function goToCheckout() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Your cart is empty. Please add an item first."
+        );
+
+        return;
+
+    }
+
+
+    closeCart();
+
+
+    const checkout =
+        document.getElementById(
+            "checkoutSection"
+        );
+
+
+    if (!checkout) {
+
+        console.error(
+            "Checkout section not found."
+        );
+
+        return;
+
+    }
+
+
+    checkout.style.display =
+        "block";
+
+
+    checkout.scrollIntoView({
+
+        behavior: "smooth"
+
+    });
+
+
+    updateTotals();
+
+}
+
+
+/* =========================================
+   BACK TO MENU
+========================================= */
+
+function backToMenu() {
+
+    const checkout =
+        document.getElementById(
+            "checkoutSection"
+        );
+
+
+    if (checkout) {
+
+        checkout.style.display =
+            "none";
+
+    }
+
+
+    const container =
+        document.querySelector(
+            ".container"
+        );
+
+
+    if (container) {
+
+        container.scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+    else {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+}
+
+
+/* =========================================
+   ORDER TYPE
+========================================= */
+
+function setupOrderType() {
+
+    const orderType =
+        document.getElementById(
+            "orderType"
+        );
+
+
+    const address =
+        document.getElementById(
+            "address"
+        );
+
+
+    if (
+        !orderType ||
+        !address
+    ) {
+
+        return;
+
+    }
+
+
+    orderType.addEventListener(
+        "change",
+        function () {
+
+            if (
+                this.value === "delivery"
+            ) {
+
+                address.required =
+                    true;
+
+
+                address.placeholder =
+                    "Enter delivery address";
+
+            }
+
+            else {
+
+                address.required =
+                    false;
+
+
+                address.placeholder =
+                    "Delivery address not required for pickup";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   PLACE ORDER
+========================================= */
+
+function placeOrder() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Your cart is empty."
+        );
+
+        return;
+
+    }
+
+
+    const requiredFields = [
+
+        "firstName",
+
+        "lastName",
+
+        "phone",
+
+        "email",
+
+        "cardName",
+
+        "cardNumber",
+
+        "expiry",
+
+        "cvv"
+
+    ];
+
+
+    const missingField =
+        requiredFields.some(
+
+            id => {
+
+                const field =
+                    document.getElementById(
+                        id
+                    );
+
+
+                return (
+                    field &&
+                    !field.value.trim()
+                );
+
+            }
+
+        );
+
+
+    if (missingField) {
+
+        alert(
+            "Please complete all required checkout and payment fields."
+        );
+
+        return;
+
+    }
+
+
+    /*
+        IMPORTANT:
+
+        This demo does NOT process
+        real credit card payments.
+
+        Connect Stripe, Square,
+        PayPal, Toast, or another
+        secure payment processor
+        for real transactions.
+    */
+
+
+    const successMessage =
+        document.getElementById(
+            "successMessage"
+        );
+
+
+    if (successMessage) {
+
+        successMessage.style.display =
+            "block";
+
+    }
+
+
+    const placeOrderButton =
+        document.querySelector(
+            ".place-order"
+        );
+
+
+    if (placeOrderButton) {
+
+        placeOrderButton.style.display =
+            "none";
+
+    }
+
+
+    /* Clear cart */
+
+    cart = [];
+
+
+    saveCart();
+
+    updateCart();
+
+
+    if (successMessage) {
+
+        successMessage.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "center"
+
+        });
+
+    }
+
+}
+
+
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHtml(value) {
+
+    return String(value).replace(
+
+        /[&<>"']/g,
+
+        character => ({
+
+            "&":
+                "&amp;",
+
+            "<":
+                "&lt;",
+
+            ">":
+                "&gt;",
+
+            '"':
+                "&quot;",
+
+            "'":
+                "&#039;"
+
+        })[character]
+
+    );
+
+}
+
+
+/* =========================================
+   INITIALIZE WEBSITE
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        /* Load saved cart */
+
+        loadCart();
+
+
+        /* Display dynamic menu */
+
+        displayMenu();
+
+
+        /* Setup delivery/pickup */
+
+        setupOrderType();
+
+
+        /* Click outside cart to close */
+
+        const overlay =
+            document.getElementById(
+                "cartOverlay"
+            );
+
+
+        if (overlay) {
+
+            overlay.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === overlay
+                    ) {
+
+                        closeCart();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* Escape key closes cart */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeCart();
+
+                }
+
+            }
+        );
+
+    }
+
+);
+
+</script>
+
+</body>
+</html>

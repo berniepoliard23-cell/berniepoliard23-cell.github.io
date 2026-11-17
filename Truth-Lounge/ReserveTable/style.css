@@ -1,0 +1,762 @@
+#navbar-reservetab {
+    background-color: black;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif
+}
+#navbar-reservetab a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+#navbar-reservetab #logo-container {
+    margin-right: 25px;
+}
+
+#navbar-reservetab #logo-container img {
+    width: 200px;
+}
+
+#navbar-reservetab .cta-button {
+  background-color: rgb(255, 137, 137);
+  color: black;
+  border-radius: 0px;
+  padding: 16px 24px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 15px;
+  text-align: center;
+  margin-right: 24px;
+  margin-left: 55px;
+  animation: flip 1.8s infinite;  
+}
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f5f3ee;
+    color: #171717;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 80px;
+
+    background: #090909;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #d4af37;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #d4af37;
+
+    padding: 10px 18px;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #d4af37;
+    color: black;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.vip-hero {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.85)
+        );
+}
+
+.vip-hero-content {
+    position: relative;
+
+    max-width: 800px;
+
+    padding: 30px;
+
+    color: white;
+}
+
+.subtitle {
+    color: #d4af37;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.vip-hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #dddddd;
+}
+
+.reserve-now {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 35px;
+
+    background: #d4af37;
+    color: black;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.reserve-now:hover {
+    background: white;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #b08d20;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 50px;
+}
+
+.gold-line {
+    width: 70px;
+    height: 2px;
+
+    background: #d4af37;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   VIP EXPERIENCE
+========================= */
+
+.vip-experience {
+    padding: 100px 7%;
+}
+
+.vip-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 35px 25px;
+
+    background: white;
+
+    border-bottom:
+        3px solid transparent;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.05);
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+
+    border-color: #d4af37;
+}
+
+.feature-icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   VIP PACKAGES
+========================= */
+
+.packages {
+    background: #111;
+
+    padding: 100px 7%;
+}
+
+.light h2 {
+    color: white;
+}
+
+.package-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.package-card {
+    position: relative;
+
+    background: #1b1b1b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 35px;
+
+    border: 1px solid #333;
+
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #d4af37;
+}
+
+.package-card.featured {
+    border: 2px solid #d4af37;
+
+    transform: scale(1.04);
+}
+
+.package-card.featured:hover {
+    transform:
+        scale(1.04)
+        translateY(-10px);
+}
+
+.popular-label {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #d4af37;
+
+    color: black;
+
+    padding: 8px 18px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.package-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.package-price {
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+.package-price strong {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 38px;
+
+    margin-top: 5px;
+}
+
+.package-card ul {
+    list-style: none;
+
+    margin-bottom: 35px;
+}
+
+.package-card li {
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid #333;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+.select-package {
+    background: transparent;
+
+    color: #d4af37;
+
+    border:
+        1px solid #d4af37;
+
+    padding: 13px 25px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.select-package:hover {
+    background: #d4af37;
+    color: black;
+}
+
+
+/* =========================
+   RESERVATION SECTION
+========================= */
+
+.reservation-section {
+    padding: 100px 7%;
+}
+
+.reservation-wrapper {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.reservation-info h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.reservation-info > p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.info-item span {
+    font-size: 25px;
+}
+
+.info-item h4 {
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.reservation-form {
+    background: white;
+
+    padding: 45px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.08);
+}
+
+.reservation-form h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #ddd;
+
+    background: #fafafa;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d4af37;
+}
+
+.submit-reservation {
+    width: 100%;
+
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-reservation:hover {
+    background: #d4af37;
+    color: black;
+}
+
+.form-note {
+    color: #999;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.success-message h3 {
+    color: #b08d20;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #090909;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+footer h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #d4af37;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.copyright {
+    margin-top: 25px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .reservation-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .reservation-info h2 {
+        font-size: 42px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card.featured {
+        transform: scale(1);
+    }
+
+    .package-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .back-button {
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+    .vip-hero {
+        min-height: 550px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .vip-experience,
+    .packages,
+    .reservation-section {
+        padding: 70px 5%;
+    }
+
+    .reservation-form {
+        padding: 25px;
+    }
+
+}

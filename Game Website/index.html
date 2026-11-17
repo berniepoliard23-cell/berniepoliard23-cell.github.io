@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ultimate Mini Arcade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         START SCREEN
+    ========================== -->
+
+    <div id="startScreen" class="screen">
+
+        <div class="start-content">
+
+            <h1>🎮 MINI ARCADE</h1>
+
+            <p>
+                Choose your game.
+                Beat your high score.
+                Become the Arcade Champion!
+            </p>
+
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Enter your name"
+                maxlength="12"
+            >
+
+            <button id="enterArcadeBtn">
+                ENTER ARCADE 🚀
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <div id="arcadeWebsite">
+
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🎮 MINI ARCADE
+            </div>
+
+
+            <div class="player-info">
+
+                Player:
+                <span id="displayPlayerName">
+                    Guest
+                </span>
+
+            </div>
+
+
+            <button
+                class="leaderboard-btn"
+                onclick="showLeaderboard()"
+            >
+                🏆 Leaderboard
+            </button>
+
+        </nav>
+
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <h1>WELCOME TO THE ARCADE</h1>
+
+            <p>
+                Play. Compete. Win.
+            </p>
+
+            <button onclick="scrollToGames()">
+                PLAY GAMES 🎮
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             GAME MENU
+        ========================== -->
+
+        <section
+            id="games"
+            class="games-section"
+        >
+
+            <h2>
+                CHOOSE A GAME
+            </h2>
+
+
+            <div class="game-menu">
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('shooting')"
+                >
+
+                    <div class="game-icon">
+                        🎯
+                    </div>
+
+                    <h3>Shooting</h3>
+
+                    <p>
+                        Test your reflexes.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('tictactoe')"
+                >
+
+                    <div class="game-icon">
+                        ❌⭕
+                    </div>
+
+                    <h3>Tic Tac Toe</h3>
+
+                    <p>
+                        Beat your opponent.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('hockey')"
+                >
+
+                    <div class="game-icon">
+                        🏒
+                    </div>
+
+                    <h3>Hockey</h3>
+
+                    <p>
+                        Protect the goal.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('maze')"
+                >
+
+                    <div class="game-icon">
+                        🌀
+                    </div>
+
+                    <h3>Maze</h3>
+
+                    <p>
+                        Find your way out.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('racing')"
+                >
+
+                    <div class="game-icon">
+                        🏎️
+                    </div>
+
+                    <h3>Racing</h3>
+
+                    <p>
+                        Avoid the cars.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('puzzle')"
+                >
+
+                    <div class="game-icon">
+                        🧩
+                    </div>
+
+                    <h3>Puzzle</h3>
+
+                    <p>
+                        Solve the challenge.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('basketball')"
+                >
+
+                    <div class="game-icon">
+                        🏀
+                    </div>
+
+                    <h3>Basketball</h3>
+
+                    <p>
+                        Make the shot.
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="game-card"
+                    onclick="openGame('football')"
+                >
+
+                    <div class="game-icon">
+                        🏈
+                    </div>
+
+                    <h3>Football</h3>
+
+                    <p>
+                        Catch the football.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SHOOTING GAME
+        ========================== -->
+
+        <section
+            id="shooting"
+            class="game-panel"
+        >
+
+            <h2>🎯 SHOOTING GAME</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    Score:
+                    <b id="shootScore">0</b>
+                </span>
+
+                <span>
+                    ⏱️
+                    <b id="shootTime">30</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="shootLives">3</b>
+                </span>
+
+            </div>
+
+
+            <button onclick="startShooting()">
+                START GAME
+            </button>
+
+
+            <div id="shootingArea">
+
+                <div id="target">
+                    🎯
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TIC TAC TOE
+        ========================== -->
+
+        <section
+            id="tictactoe"
+            class="game-panel"
+        >
+
+            <h2>❌⭕ TIC TAC TOE</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    ⏱️
+                    <b id="ticTime">60</b>
+                </span>
+
+            </div>
+
+
+            <p id="ticMessage">
+                Player X's Turn
+            </p>
+
+
+            <div id="ticBoard"></div>
+
+
+            <button onclick="resetTicTacToe()">
+                RESTART
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             HOCKEY
+        ========================== -->
+
+        <section
+            id="hockey"
+            class="game-panel"
+        >
+
+            <h2>🏒 HOCKEY</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    Score:
+                    <b id="hockeyScore">0</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="hockeyLives">3</b>
+                </span>
+
+            </div>
+
+
+            <canvas
+                id="hockeyCanvas"
+                width="700"
+                height="400"
+            ></canvas>
+
+
+            <div class="mobile-controls">
+
+                <button
+                    ontouchstart="moveHockey(-30)"
+                    onclick="moveHockey(-30)"
+                >
+                    ⬅️
+                </button>
+
+                <button
+                    ontouchstart="moveHockey(30)"
+                    onclick="moveHockey(30)"
+                >
+                    ➡️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MAZE
+        ========================== -->
+
+        <section
+            id="maze"
+            class="game-panel"
+        >
+
+            <h2>🌀 MAZE GAME</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    ⏱️
+                    <b id="mazeTime">60</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="mazeLives">3</b>
+                </span>
+
+            </div>
+
+
+            <div id="mazeBoard"></div>
+
+
+            <div class="mobile-controls">
+
+                <button onclick="moveMaze('up')">
+                    ⬆️
+                </button>
+
+
+                <div>
+
+                    <button onclick="moveMaze('left')">
+                        ⬅️
+                    </button>
+
+                    <button onclick="moveMaze('down')">
+                        ⬇️
+                    </button>
+
+                    <button onclick="moveMaze('right')">
+                        ➡️
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RACING
+        ========================== -->
+
+        <section
+            id="racing"
+            class="game-panel"
+        >
+
+            <h2>🏎️ RACING GAME</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    Score:
+                    <b id="raceScore">0</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="raceLives">3</b>
+                </span>
+
+            </div>
+
+
+            <button onclick="startRace()">
+                START RACE
+            </button>
+
+
+            <canvas
+                id="raceCanvas"
+                width="500"
+                height="600"
+            ></canvas>
+
+
+            <div class="mobile-controls">
+
+                <button onclick="moveCar(-40)">
+                    ⬅️
+                </button>
+
+                <button onclick="moveCar(40)">
+                    ➡️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PUZZLE
+        ========================== -->
+
+        <section
+            id="puzzle"
+            class="game-panel"
+        >
+
+            <h2>🧩 PUZZLE</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    ⏱️
+                    <b id="puzzleTime">120</b>
+                </span>
+
+            </div>
+
+
+            <div id="puzzleBoard"></div>
+
+
+            <button onclick="shufflePuzzle()">
+                SHUFFLE
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             BASKETBALL
+        ========================== -->
+
+        <section
+            id="basketball"
+            class="game-panel"
+        >
+
+            <h2>🏀 BASKETBALL</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    Score:
+                    <b id="basketScore">0</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="basketLives">3</b>
+                </span>
+
+            </div>
+
+
+            <canvas
+                id="basketCanvas"
+                width="800"
+                height="500"
+            ></canvas>
+
+
+            <div class="mobile-controls">
+
+                <button onclick="shootBasketball()">
+                    🏀 SHOOT
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTBALL
+        ========================== -->
+
+        <section
+            id="football"
+            class="game-panel"
+        >
+
+            <h2>🏈 FOOTBALL</h2>
+
+            <div class="game-hud">
+
+                <span>
+                    Touchdowns:
+                    <b id="footballScore">0</b>
+                </span>
+
+                <span>
+                    ❤️
+                    <b id="footballLives">3</b>
+                </span>
+
+            </div>
+
+
+            <canvas
+                id="footballCanvas"
+                width="700"
+                height="450"
+            ></canvas>
+
+
+            <div class="mobile-controls">
+
+                <button onclick="moveFootball(-30)">
+                    ⬅️
+                </button>
+
+                <button onclick="moveFootball(30)">
+                    ➡️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LEADERBOARD
+        ========================== -->
+
+        <div
+            id="leaderboardModal"
+            class="modal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-btn"
+                    onclick="closeLeaderboard()"
+                >
+                    ✖
+                </button>
+
+
+                <h2>
+                    🏆 GLOBAL LEADERBOARD
+                </h2>
+
+
+                <div id="leaderboardList"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             GAME OVER
+        ========================== -->
+
+        <div
+            id="gameOverScreen"
+            class="modal"
+        >
+
+            <div class="modal-content">
+
+                <h1>
+                    GAME OVER 💀
+                </h1>
+
+
+                <p id="gameOverMessage"></p>
+
+
+                <button onclick="closeGameOver()">
+                    PLAY AGAIN
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <footer>
+
+            🎮 Ultimate Mini Arcade © 2026
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+ 

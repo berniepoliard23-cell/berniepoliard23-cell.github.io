@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Navbar container */
+#Douce-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 30px;
+}
+
+/* Logo */
+#logo-container img {
+  border-radius: 5%;
+}
+
+/* Nav links */
+#Douce-navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+/* Standard buttons */
+.button:hover {
+  color: #fb0000;
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: #ff0000;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #919191;
+}
+
+/* Align links to the right */
+#Douce-navbar a:not(#logo-container) {
+  display: inline-block;
+}
+
+/* Optional: spacing fix */
+#Douce-navbar {
+  gap: 15px;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-hero {
+    background-image: url("../images/blackcollage.webp");
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(6, 6, 6);
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+    background-color: rgb(146, 90, 50);
+}
+
+.asthetic-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    background-color: rgb(146, 90, 50);
+}
+
+.asthetic-gallery img {
+    height: 250px;
+    flex: 1;
+    object-fit: cover;
+}
+
+.show-more {
+    border-top-left-radius: 10%;
+    border-style: dashed;
+    border-color: black;
+}

@@ -1,0 +1,701 @@
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #24183d;
+}
+
+:root {
+    --purple: #35115f;
+    --dark-purple: #1d0b38;
+    --light-purple: #7041a5;
+    --gold: #d9ad50;
+    --light-gold: #f5d98e;
+    --blue: #164d9b;
+    --light-blue: #367acb;
+    --white: #ffffff;
+}
+
+
+/* EDEN SDA NAVBAR */
+
+#Eden-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+
+    background: linear-gradient(
+        110deg,
+        #350c64 55%,
+        #003d92 100%
+    );
+
+    border-bottom: 3px solid #D9AD50;
+    box-shadow: 0 4px 15px rgba(29, 11, 56, 0.25);
+}
+
+/* NAVIGATION LINKS */
+
+#Eden-navbar .button {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 12px 15px;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .button:hover,
+#Eden-navbar .button.active {
+    color: #F5D98E;
+}
+
+/* CONTACT BUTTON */
+
+#Eden-navbar .cta-button {
+    background: #D9AD50;
+    color: #1D0B38;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .cta-button:hover {
+    background: #F5D98E;
+    transform: translateY(-2px);
+}
+
+/* LOGO */
+
+#logo-container img {
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 680px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(29, 11, 56, 0.94),
+            rgba(53, 17, 95, 0.85),
+            rgba(22, 77, 155, 0.80)
+        ),
+        url("images/eden-hero.jpg");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(217, 173, 80, 0.13),
+            transparent 55%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    color: white;
+}
+
+.welcome-tag {
+    display: inline-block;
+    color: var(--light-gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 76px);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--light-gold);
+}
+
+.gold-line {
+    width: 90px;
+    height: 3px;
+    background: var(--gold);
+    margin: 30px auto;
+}
+
+.hero-content > p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #e5dff0;
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.hero-actions .cta-button {
+    padding: 17px 30px;
+    color: #f9f8fa;
+}
+
+.button.secondary {
+    border: 1px solid var(--light-gold);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+}
+
+.button.secondary:hover {
+    background: var(--light-gold);
+    color: var(--dark-purple);
+}
+
+.hero-bottom {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #e9e1f3;
+}
+
+.dot {
+    color: var(--gold);
+}
+
+.hero-decoration {
+    position: absolute;
+    bottom: 40px;
+    right: 8%;
+    color: rgba(245, 217, 142, 0.35);
+    font-size: 100px;
+}
+
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+    padding: 110px 10%;
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    background: #e9d7fe;
+}
+
+.welcome-image {
+    flex: 1;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0 var(--gold);
+}
+
+.welcome-content {
+    flex: 1;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.welcome-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    line-height: 1.3;
+    color: var(--dark-purple);
+    margin: 20px 0;
+}
+
+.welcome-content h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.welcome-content p {
+    color: #686174;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.learn-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 800;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 8px;
+}
+
+.learn-link:hover {
+    color: var(--blue);
+}
+
+
+/* =========================
+   COMMUNITY SECTION
+========================= */
+
+.community-section {
+    padding: 100px 10%;
+    background: #e1d0f8;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--dark-purple);
+    margin: 18px 0;
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: #746d7d;
+}
+
+.community-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    box-shadow: #1D0B38;
+}
+
+.community-card {
+    background: white;
+    padding: 45px 30px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--gold);
+    transition: 0.4s ease;
+    box-shadow: 0 5px 25px rgba(53, 17, 95, 0.05);
+}
+
+.community-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(53, 17, 95, 0.12);
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--blue)
+    );
+    color: var(--light-gold);
+    font-size: 30px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.community-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--purple);
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.community-card p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #746d7d;
+    margin-bottom: 25px;
+}
+
+.community-card a {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.community-card a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================
+   SCRIPTURE SECTION
+========================= */
+
+.scripture-section {
+    padding: 100px 10%;
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        var(--dark-purple),
+        var(--purple),
+        var(--blue)
+    );
+    color: white;
+}
+
+.scripture-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.scripture-content span {
+    color: var(--light-gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.scripture-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    line-height: 1.7;
+    margin: 30px 0;
+}
+
+.scripture-content p {
+    color: var(--light-gold);
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   JOIN EDEN SECTION
+========================= */
+
+.join-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgb(227, 216, 251);
+}
+
+.join-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-purple);
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.join-section p {
+    color: #746d7d;
+    font-size: 14px;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+    width: 100%;
+    background: linear-gradient(
+        110deg,
+        #340181 50%,
+        #0060e7 100%
+    );
+    background-position: center;
+    color: #ffffff;
+    padding: 75px 8% 0;
+    border-top: 4px solid #ffb20c;
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-column h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #ffbb00;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-column h2 span {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #fbfaf9;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #367acb;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   CHURCH INFORMATION
+========================= */
+
+.church-info p {
+    color: #fafafa;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 25px;
+    max-width: 280px;
+}
+
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    color: #fefdfe;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f5d98e;
+    padding-left: 6px;
+}
+
+
+/* =========================
+   SOCIAL MEDIA LINKS
+========================= */
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9ad50;
+    border-radius: 50%;
+    color: #f5d98e;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #d9ad50;
+    color: #1d0b38;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-info p span {
+    color: #f5d98e;
+}
+
+.contact-info a {
+    color: #fdfdfd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: #f5d98e;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #faf9fc;
+    font-size: 12px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom-links a {
+    color: #fbfbfb;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-bottom-links a:hover {
+    color: #f5d98e;
+}
+
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1000px) {
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .footer-container {
+        padding: 55px 7% 0;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .church-info {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .church-info {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,757 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #24183d;
+}
+
+:root {
+    --purple: #35115f;
+    --dark-purple: #1d0b38;
+    --light-purple: #7041a5;
+    --gold: #d9ad50;
+    --light-gold: #f5d98e;
+    --blue: #164d9b;
+    --light-blue: #367acb;
+    --white: #ffffff;
+}
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+/* EDEN SDA NAVBAR */
+
+#Eden-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+
+    background: linear-gradient(
+        110deg,
+        #1D0B38 0%,
+        #35115F 55%,
+        #164D9B 100%
+    );
+
+    border-bottom: 3px solid #D9AD50;
+    box-shadow: 0 4px 15px rgba(29, 11, 56, 0.25);
+}
+
+/* NAVIGATION LINKS */
+
+#Eden-navbar .button {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 12px 15px;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .button:hover,
+#Eden-navbar .button.active {
+    color: #F5D98E;
+}
+
+/* CONTACT BUTTON */
+
+#Eden-navbar .cta-button {
+    background: #D9AD50;
+    color: #1D0B38;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .cta-button:hover {
+    background: #F5D98E;
+    transform: translateY(-2px);
+}
+
+/* LOGO */
+
+#logo-container img {
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================================
+   EDEN SDA ABOUT US PAGE
+========================================= */
+
+.about-hero,
+.about-introduction,
+.mission-vision,
+.core-values,
+.about-worship,
+.about-community {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HERO SECTION */
+
+.about-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(rgba(72, 43, 117, 0.9), rgba(41, 116, 255, 0.82)),
+        url("image/about-hero.jpg") center/cover no-repeat;
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 850px;
+}
+
+.about-subtitle,
+.about-section-label {
+    color: #D9AD50;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.2;
+    margin: 0 0 22px;
+    color: #000;
+}
+
+.about-hero h1 span {
+    color: #000000;
+}
+
+.about-hero-content > p:not(.about-subtitle) {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 15px 26px;
+    background: #ffc445;
+    color: #1D0B38;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background: #F5D98E;
+    transform: translateY(-3px);
+}
+
+
+/* WHO WE ARE */
+
+.about-introduction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 8%;
+    background: #F6F3FA;
+}
+
+.about-intro-image {
+    height: 430px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid #D9AD50;
+}
+
+.about-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-intro-content h2,
+.mission-vision-heading h2,
+.values-heading h2,
+.worship-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1D0B38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    margin: 0 0 22px;
+}
+
+.about-intro-content h2 span,
+.mission-vision-heading h2 span,
+.values-heading h2 span,
+.worship-content h2 span {
+    color: #164D9B;
+}
+
+.about-intro-content p:not(.about-section-label) {
+    color: #000000;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 17px;
+}
+
+.about-text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #080808;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.about-text-link:hover {
+    color: #D9AD50;
+}
+
+
+/* MISSION AND VISION */
+
+.mission-vision {
+    padding: 90px 8%;
+    background: rgba(72, 43, 117, 0.9)
+}
+
+.mission-vision-heading,
+.values-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.mission-vision-heading h2 {
+    color: white;
+}
+
+.mission-vision-heading h2 span {
+    color: #F5D98E;
+}
+
+.mission-vision-heading > p:last-child {
+    color: #D8CFE3;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.purpose-card {
+    background: #35115F;
+    border: 1px solid rgba(217, 173, 80, 0.45);
+    border-radius: 10px;
+    padding: 40px 35px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.purpose-card:hover {
+    transform: translateY(-6px);
+    border-color: #D9AD50;
+}
+
+.purpose-icon {
+    color: #F5D98E;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.purpose-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #F5D98E;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.purpose-card p {
+    color: #E7DFEF;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* CORE VALUES */
+
+.core-values {
+    padding: 95px 8%;
+    background: #F6F3FA;
+}
+
+.values-heading > p:last-child {
+    color: #746D7D;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.value-card {
+    background: white;
+    border-radius: 10px;
+    padding: 35px 22px;
+    text-align: center;
+    box-shadow: 0 7px 25px rgba(29, 11, 56, 0.07);
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(29, 11, 56, 0.13);
+}
+
+.value-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #35115F;
+    color: #F5D98E;
+    font-size: 29px;
+}
+
+.value-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1D0B38;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #746D7D;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* WORSHIP SECTION */
+
+.about-worship {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 95px 8%;
+    background: white;
+}
+
+.worship-image {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.worship-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.worship-content p:not(.about-section-label) {
+    color: #746D7D;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.worship-content .about-btn {
+    margin-top: 10px;
+}
+
+
+/* COMMUNITY SECTION */
+
+.about-community {
+    padding: 95px 8%;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(111, 60, 187, 0.93), rgba(40, 115, 195, 0.91)),
+        url("image/church-community.jpg") center/cover no-repeat;
+}
+
+.community-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.community-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 50px);
+    line-height: 1.25;
+    margin: 0 0 22px;
+}
+
+.community-content h2 span {
+    color: #F5D98E;
+}
+
+.community-content > p:not(.about-section-label) {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    color: #E7DFEF;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   ABOUT PAGE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 950px) {
+
+    .about-introduction,
+    .about-worship {
+        gap: 35px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .about-hero {
+        min-height: 430px;
+        padding: 65px 7%;
+    }
+
+    .about-introduction,
+    .about-worship {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+    }
+
+    .about-intro-image,
+    .worship-image {
+        height: 280px;
+    }
+
+    .mission-vision,
+    .core-values,
+    .about-community {
+        padding: 70px 7%;
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-hero h1 {
+        font-size: 39px;
+    }
+
+    .about-intro-content h2,
+    .mission-vision-heading h2,
+    .values-heading h2,
+    .worship-content h2 {
+        font-size: 32px;
+    }
+
+    .purpose-card {
+        padding: 30px 22px;
+    }
+
+}
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+    width: 100%;
+    background: linear-gradient(
+         110deg,
+        #6c35be 0%,
+        #904ddc 55%,
+        #266cce 100%
+    );
+    color: #ffffff;
+    padding: 75px 8% 0;
+    border-top: 4px solid #dfa810;
+}
+
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-column h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #f9bf21;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-column h2 span {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #f3b634;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #367acb;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   CHURCH INFORMATION
+========================= */
+
+.church-info p {
+    color: #fdfcfe;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 25px;
+    max-width: 280px;
+}
+
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f5d98e;
+    padding-left: 6px;
+}
+
+
+/* =========================
+   SOCIAL MEDIA LINKS
+========================= */
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9ad50;
+    border-radius: 50%;
+    color: #f6b400;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #d9ad50;
+    color: #1d0b38;
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fafafb;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-info p span {
+    color: #f5d98e;
+}
+
+.contact-info a {
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: #f5d98e;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #f7f7f8;
+    font-size: 12px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom-links a {
+    color: #fcfcfd;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-bottom-links a:hover {
+    color: #ffbb00;
+}
+
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1000px) {
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    .footer-container {
+        padding: 55px 7% 0;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .church-info {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .church-info {
+        grid-column: span 1;
+    }
+}

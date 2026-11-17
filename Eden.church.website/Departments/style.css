@@ -1,0 +1,315 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #24183d;
+}
+
+:root {
+    --purple: #35115f;
+    --dark-purple: #1d0b38;
+    --light-purple: #7041a5;
+    --gold: #d9ad50;
+    --light-gold: #f5d98e;
+    --blue: #164d9b;
+    --light-blue: #367acb;
+    --white: #ffffff;
+}
+
+/* EDEN SDA NAVBAR */
+
+#Eden-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+
+    background: linear-gradient(
+        110deg,
+        #350c64 45%,
+        #018ef9 100%
+    );
+
+    border-bottom: 3px solid #D9AD50;
+    box-shadow: 0 4px 15px rgba(29, 11, 56, 0.25);
+}
+
+/* NAVIGATION LINKS */
+
+#Eden-navbar .button {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 12px 15px;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .button:hover,
+#Eden-navbar .button.active {
+    color: #F5D98E;
+}
+
+/* CONTACT BUTTON */
+
+#Eden-navbar .cta-button {
+    background: #D9AD50;
+    color: #1D0B38;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+#Eden-navbar .cta-button:hover {
+    background: #F5D98E;
+    transform: translateY(-2px);
+}
+
+/* LOGO */
+
+#logo-container img {
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =====================================
+   EDEN DEPARTMENTS PAGE
+===================================== */
+
+.department-hero,
+.department-intro,
+.departments-container,
+.department-invitation {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.department-hero {
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(29, 11, 56, 0.88), rgba(53, 17, 95, 0.82)),
+        url("image/departments-hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    color: white;
+}
+
+.department-hero-content {
+    max-width: 700px;
+}
+
+.department-subtitle,
+.section-tag {
+    color: #D9AD50;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.department-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.department-hero h1 span {
+    color: #F5D98E;
+}
+
+.department-hero-content > p:not(.department-subtitle) {
+    color: #eee6f5;
+    line-height: 1.9;
+    font-size: 15px;
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+.department-btn {
+    display: inline-block;
+    background: #D9AD50;
+    color: #1D0B38;
+    text-decoration: none;
+    padding: 15px 26px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.department-btn:hover {
+    background: #F5D98E;
+    transform: translateY(-3px);
+}
+
+
+/* INTRODUCTION */
+
+.department-intro {
+    background: #dcc2fc;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.department-intro h2,
+.department-heading h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1D0B38;
+    font-size: clamp(32px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.department-intro h2 span,
+.department-heading h2 span {
+    color: #164D9B;
+}
+
+.department-intro > p:last-child {
+    max-width: 750px;
+    margin: auto;
+    color: #746D7D;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* DEPARTMENT CARDS */
+
+.departments-container {
+    background: #dec9f9;
+    padding: 40px 8% 100px;
+}
+
+.department-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.department-heading > p:last-child {
+    color: #746D7D;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.department-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 50px 50px rgb(160, 107, 245);
+    transition: 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(210, 185, 247, 0.16);
+}
+
+.department-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.department-card:hover img {
+    transform: scale(1.04);
+}
+
+.department-card-content {
+    padding: 27px 24px 30px;
+}
+
+.department-label {
+    color: #164D9B;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.department-card h3 {
+    color: #1D0B38;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.department-card p {
+    color: #746D7D;
+    font-size: 13px;
+    line-height: 1.9;
+    min-height: 100px;
+}
+
+.department-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #164D9B;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.department-card a:hover {
+    color: #D9AD50;
+}
+
+
+/* INVITATION SECTION */
+
+.department-invitation {
+    background:
+        linear-gradient(rgba(29, 11, 56, 0.94), rgba(53, 17, 95, 0.92)),
+        url("image/church-community.jpg") center/cover no-repeat;
+    padding: 90px 8%;
+    text-align: center;
+    color: white;
+}
+
+.invitation-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.invitation-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.invitation-content h2 span {
+    color: #F5D98E;
+}
+
+.invitation-content > p:not(.section-tag) {
+    color: #E7DFEF;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
